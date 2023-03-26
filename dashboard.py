@@ -27,5 +27,5 @@ def update_graph(n):
     return {'data': [data]}
 
 if __name__ == '__main__':
-    app.run_server(port=8050, debug=True)
+    app.run_server(host = '20.126.50.5',port=8050, debug=True)
 
