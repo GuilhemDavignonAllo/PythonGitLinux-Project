@@ -12,10 +12,10 @@ data = pd.read_csv('cleaneddata.csv', names=['timestamp', 'value'])
 data['timestamp'] = pd.to_datetime(data['timestamp'])
 
 app.layout = html.Div([
-    html.H1('Titre du Graphique'),
+    html.H1('Tesla Stock Price'),
     dcc.Graph(id='time-series-graph'),
     html.Div([
-        html.H2('daily-report'),
+        html.H2('Rapport Quotidien'),
         html.Table([
             html.Tr([html.Th('Date'), html.Th('Prix d\'ouverture'), html.Th('Prix de clôture'), html.Th('Prix minimal'), html.Th('Prix maximal'), html.Th('Volatilité quotidienne')]),
             html.Tr([html.Td(id='date'), html.Td(id='open-price'), html.Td(id='close-price'), html.Td(id='min-price'), html.Td(id='max-price'), html.Td(id='daily-volatility')])
